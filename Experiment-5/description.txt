@@ -1,0 +1,31 @@
+anvas Freehand Drawing Tool
+
+This is a simple web app where you can draw freely on a canvas using your mouse. Its made using HTML, CSS and JavaScript. You just click and drag your mouse and it draws lines in real time, kinda like using a pen on paper.
+
+Features:
+
+Draw in real time as you move the mouse.
+
+Lines are blue and smooth, and you can change size if you want.
+
+Drawing stops when you release mouse or leave the canvas.
+
+Very simple and light, works in any browser.
+
+What I learned:
+
+How to use canvas to draw instead of SVG.
+
+Handling mouse events like mousedown, mousemove, mouseup.
+
+How to draw lines dynamically with JS.
+
+Made my first interactive web drawing app.
+
+Technologies used:
+
+HTML5 for the canvas and page.
+
+CSS3 for style.
+
+JavaScript for drawing and events.
