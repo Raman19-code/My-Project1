@@ -1,0 +1,18 @@
+I have created a simple and clean banking interface using HTML and CSS.
+
+HTML:
+ In the HTML file, I added a structure that includes an outer box and an inner box. 
+ Inside the inner box, I displayed a balance amount using an <h1> tag, which shows "$0" by default.
+ Below that, I placed two buttons one for Deposit and one for Withdraw. 
+ These buttons are placed inside their own div blocks  to keep them organized. 
+
+ CSS:
+
+ In the CSS file, I styled the full page to be centered using Flexbox.
+ I made it with a light gray background and Arial font. 
+ I styled the outer_box to have padding, rounded corners, and a shadow effect to make it look nice.
+ Inside it, the inner_box has a white background, padding, and center-aligned text with its own shadow. 
+ I also styled the heading to make the balance amount look clear.
+ The heading that shows the balance is made bigger and darker for clear visibility. 
+ I also styled both buttons with padding, rounded edges. 
+ The Deposit button is green to show positive action, and the Withdraw button is red to show money being taken out.

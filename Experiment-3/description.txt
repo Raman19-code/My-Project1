@@ -1,0 +1,55 @@
+HTML:
+
+<input type="checkbox" id="themeSwitch" hidden /> : This is a hidden checkbox used to change the website theme
+from light to using only CSS.
+
+<div class="dashboard"> : This is the main container that holds the full layout of the dashboard like the header
+sidebar, content area, and footer.
+
+<header class="header"> : This is the top part of page where we show the title and the theme switch button.
+
+<h1>Admin Dashboard</h1> : Displays the main heading of the page saying Admin Dashboard.
+
+<div class="theme-switch"> :A section inside the header used to keep the theme switch box and its label.
+
+<label for="themeSwitch">:A label linked to the hidden checkbox. When clicked it turns the dark mode on or off.
+
+<span class="box"></span> Dark Mode :Shows small box and the text Dark Mode to change the theme.
+
+<aside class="sidebar">: This is the sidebar on the left used for navigation links.
+
+<a href="#">Home</a>, <a href="#">Users</a>, <a href="#">Settings</a>: Clickable links for navigating
+to Home, Users, and Settings sections.
+
+<main class="main-content">: This is the main part of the page where dashboard content will be shown.
+
+<h2>Welcome, Admin!</h2>: A subheading to welcome the admin user.
+
+<footer class="footer">: The bottom part of the page that shows footer information.
+
+
+CSS:
+
+root : Defines color variables for the light theme.
+
+#themeSwitch:checked ~ .dashboard – Changes color variables for dark theme when checkbox is checked.
+
+body : Sets the font and background/text color using theme variables.
+
+.dashboard : Creates a grid layout with header, sidebar, main content, and footer.
+
+.header : Styles the top bar with background color, spacing, and flex layout.
+
+.theme-switch : Aligns the theme switch box and text in a row.
+
+.theme-switch .box – Styles the small square toggle box for dark mode.
+
+#themeSwitch:checked ~ .dashboard .theme-switch .box – Fills the box when dark mode is active.
+
+.sidebar – Styles the sidebar with background color and padding.
+
+.sidebar a – Styles the navigation links in the sidebar.
+
+.main-content – Adds padding and sets background for the main area.
+
+.footer – Styles the bottom section with background color, padding, and center text.

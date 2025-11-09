@@ -1,0 +1,58 @@
+SVG DRAWING TOOL
+
+FIELD: Drawing Area (SVG Canvas)
+Requirement: This is the main area where the user can draw freely with the mouse.
+Working: When the user clicks and drags the mouse inside the SVG canvas, lines are drawn following the mouse movement.
+
+VALID INPUTS:
+
+Clicking and dragging inside the canvas → Draws lines smoothly.
+
+Releasing the mouse → Stops drawing.
+
+Moving the mouse outside the canvas while drawing → Stops drawing automatically.
+
+INVALID INPUTS:
+
+Clicking outside the SVG canvas → No drawing occurs.
+
+Selecting text or other UI elements → No effect on drawing.
+
+FIELD: Polyline (Drawing Path)
+Requirement: This represents the line being drawn on the SVG canvas.
+Working:
+
+A new polyline element is created each time the user presses the mouse button down.
+
+The points attribute of the polyline updates continuously as the mouse moves, creating a connected line.
+
+Polyline style: blue color (deepskyblue), stroke width 2, and no fill.
+
+VALID OUTPUTS:
+
+Drawing a zig-zag → Shows a connected blue line following the mouse path.
+
+Drawing straight → Shows a smooth polyline following the mouse coordinates.
+
+SCRIPT (JavaScript Code)
+The script handles user interaction and draws lines dynamically:
+
+Tracks mouse events: mousedown, mousemove, mouseup, and mouseleave.
+
+getMousePosition() calculates mouse coordinates relative to the SVG canvas.
+
+On mousedown, it starts a new polyline and sets the initial point.
+
+On mousemove, it appends new points to the polyline if drawing is active.
+
+On mouseup or mouseleave, it stops drawing.
+
+LEARNING OUTCOMES
+
+How to use SVG elements for drawing.
+
+How to capture mouse events in JavaScript.
+
+How to dynamically update attributes of SVG elements to create interactive drawings.
+
+Understanding coordinate calculation relative to an element using getBoundingClientRect().

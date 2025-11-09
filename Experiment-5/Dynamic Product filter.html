@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
+        .product-list-box {
+            width: 96%;
+            max-width: 800px;
+            margin: 28px auto;
+            border: 2px solid #222;
+            padding: 24px 22px 28px 22px;
+            background: #fff;
+            border-radius: 2px;
+        }
+        h2 {
+            margin-bottom: 14px;
+        }
+        label {
+            font-size: 16px;
+            margin-right: 6px;
+        }
+        select {
+            margin-bottom: 22px;
+            padding: 6px;
+            font-size: 16px;
+        }
+        #productItems {
+            margin-top: 0;
+        }
+        .product-entry {
+            border: 1px solid #eee;
+            margin-bottom: 13px;
+            background: #fafafa;
+            padding: 9px 13px;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-list-box">
+        <h2>Product List</h2>
+        <label for="categorySelect">Filter by Category:</label>
+        <select id="categorySelect">
+            <option value="All">All</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+        </select>
+        <div id="productItems"></div>
+    </div>
+    <script>
+        const products = [
+            { name: "T-Shirt", category: "Clothing" },
+            { name: "Jeans", category: "Clothing" },
+            { name: "Headphones", category: "Electronics" },
+            { name: "Smartphone", category: "Electronics" },
+            { name: "Novel", category: "Books" },
+            { name: "Cookbook", category: "Books" }
+        ];
+
+        const categorySelect = document.getElementById("categorySelect");
+        const productItems = document.getElementById("productItems");
+
+        function renderProducts(category) {
+            productItems.innerHTML = "";
+            let filtered = (category === "All")
+                ? products
+                : products.filter(product => product.category === category);
+
+            filtered.forEach(product => {
+                const div = document.createElement("div");
+                div.className = "product-entry";
+                div.textContent = product.name;
+                productItems.appendChild(div);
+            });
+        }
+
+        categorySelect.addEventListener("change", () => {
+            renderProducts(categorySelect.value);
+        });
+
+        // Initial render
+        renderProducts("All");
+    </script>
+</body>
+</html>

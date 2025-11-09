@@ -1,0 +1,13 @@
+For HTML :
+I have created a student registration form using a form tag.
+Then in the form tag I have taken two HTML elements as input and label for name , email, age and submit button.
+Then for name field I have taken input and label element and uses a validation of minlength and maxlength required.
+Then same for the email, validation used is required if user will not enter the email it will show error and 
+it will ask for to enter mail id 
+Then for the age field we use validation as age min 1 and max 99 required if user will enter the age falling
+out from the give range it will show error.
+At last created a submit button.
+
+For CSS :
+First I have mapped HTML file with CSS file using <link rel="stylesheet" href="style.css">.
+Then I have given a background color aquamarine to the form .

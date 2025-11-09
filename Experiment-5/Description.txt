@@ -1,0 +1,49 @@
+PRODUCT LIST FILTER
+
+FIELD: Category Dropdown (Select Box)
+Requirement: This is the dropdown where the user can select a product category (All, Clothing, Electronics, Books).
+Working: As soon as the user selects a category, the list of products updates automatically to show only items from that category.
+
+VALID INPUTS:
+
+Selecting "All" → Shows all products
+
+Selecting "Clothing" → Shows T-Shirt, Jeans
+
+Selecting "Electronics" → Shows Headphones, Smartphone
+
+Selecting "Books" → Shows Novel, Cookbook
+
+
+FIELD: Product List (Display Box)
+Requirement: This area displays the products filtered according to the selected category.
+Working: Whenever the user changes the category, the product entries are dynamically created and displayed in this box.
+
+VALID OUTPUTS:
+
+Category "All" → Shows all six products
+
+Category "Clothing" → Shows only T-Shirt and Jeans
+
+Category "Electronics" → Shows Headphones and Smartphone
+
+Category "Books" → Shows Novel and Cookbook
+
+SCRIPT (JavaScript Code)
+The script is used to filter and render products dynamically.
+
+It keeps an array of products with their name and category.
+
+Uses renderProducts() to show the filtered list.
+
+Uses an event listener on the dropdown to detect changes.
+
+Main logic: filter the products array based on the selected category and create <div> elements for each item in the display box.
+
+LEARNING OUTCOMES
+
+How to dynamically manipulate the DOM using JavaScript.
+
+How to filter data based on user input.
+
+How to create interactive web pages with real-time updates.

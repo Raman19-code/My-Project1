@@ -1,0 +1,46 @@
+LIVE CHARACTER COUNTER
+
+FIELD: Textarea (Typing Box)
+Requirement: This is the box where the user can type anything.
+Working: As soon as we start typing, it will count the number of characters and show them below.
+VALID INPUTS:
+
+"Hello" → Shows 5
+
+"12345" → Shows 5
+
+"Hi there!" → Shows 9
+INVALID INPUTS:
+
+None, because all types of characters are allowed (letters, numbers, symbols).
+
+FIELD: Character Counter (Display Part)
+Requirement: It shows how many characters are typed inside the textarea.
+Working: The value changes immediately whenever we add or remove any character.
+VALID OUTPUTS:
+
+Typing "abc" → Characters: 3
+
+Typing "Good Morning" → Characters: 12
+
+Empty box → Characters: 0
+
+SCRIPT (JavaScript Code)
+
+The script is used to update the character count live.
+
+It works using the input event which runs every time we type, delete, paste, or cut text.
+
+Main logic: take the length of the text and show it in the <span> tag.
+
+FORM SUBMISSION
+
+The only purpose is to show the live character count.
+
+LEARNING OUTCOMES
+
+How to use JavaScript input event to detect typing.
+
+How to change text in HTML elements dynamically using JavaScript.
+
+How to make a small tool that gives real-time results.

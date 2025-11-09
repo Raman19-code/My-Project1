@@ -1,0 +1,9 @@
+In this task, I am learning how to implement role-based access control (RBAC) in a Node.js and Express application. The main goal is to restrict access to certain routes or actions based on the user’s role. By doing this, I gain practical experience in managing user permissions, storing and checking roles in JWT tokens, and securing sensitive parts of my backend API.
+
+I start by setting up a backend with Node.js and Express. I create a login route that authenticates the user and issues a JWT token. This token includes the user’s role—Admin, User, or Moderator—in its payload. Including the role in the token allows me to verify not just whether a user is authenticated, but also what actions or routes they are authorized to access.
+
+Next, I create middleware that verifies the JWT token and extracts the user’s role from it. This middleware acts as a gatekeeper for my routes. Depending on the role, the middleware either allows the request to proceed or denies access with a clear error message. This helps me understand how to implement flexible authorization logic that can handle multiple roles in a scalable way.
+
+I then implement protected routes for different roles. For example, an Admin-only dashboard, a Moderator management route, and a general User profile route. Each route can only be accessed if the JWT token is valid and the user has the correct role. If a user tries to access a route they are not authorized for, the request is blocked and a meaningful error message is returned.
+
+To test my implementation, I log in as different users with different roles and attempt to access each protected route. This confirms that role-based restrictions are working correctly. By completing this task, I gain hands-on experience with securing backend APIs, issuing role-aware JWT tokens, creating authorization middleware, and ensuring that sensitive resources are accessible only to the right users.

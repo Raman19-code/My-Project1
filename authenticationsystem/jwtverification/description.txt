@@ -1,0 +1,9 @@
+In this task, I am learning how to secure backend API routes using JSON Web Tokens (JWT). The main goal is to ensure that only authenticated users can access certain resources on my server. By working on this, I get hands-on experience with token-based authentication, verifying JWTs on the server, and protecting routes from unauthorized access.
+
+I start by creating a backend using Node.js and Express.js. I implement a login route that checks user credentials and, if they are valid, issues a JWT token. For simplicity, I hardcode a sample user. This helps me understand how authentication works without getting distracted by database logic. When the user logs in successfully, they receive a token that proves their identity.
+
+Next, I create a middleware function that verifies the JWT token sent in the request’s Authorization header as a Bearer token. This middleware acts as a gatekeeper: it checks if the token is present and valid, and only then allows the request to proceed. If the token is missing or invalid, the middleware blocks the request and responds with an error, preventing unauthorized access to protected resources.
+
+I then apply this middleware to one or more routes that I want to protect. These routes can now only be accessed if the request includes a valid token. To test my implementation, I try accessing the protected route both with and without a token. When the token is valid, I can access the resource; when the token is missing or invalid, I see an error message.
+
+By completing this task, I gain practical experience with securing backend APIs using JWTs. I learn how to implement login authentication, issue and verify tokens, use middleware to protect routes, and handle authorized versus unauthorized requests. This knowledge is essential for building secure web applications where sensitive data should only be accessible to authenticated users.
